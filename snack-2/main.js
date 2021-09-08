@@ -69,14 +69,22 @@ var zucchine = [
 //Dividi in due array separati le zucchine che misurano meno o più di 15cm.
 var zucchineCorte = [];
 var zucchineLunghe = [];
+
+var pesoZucchineCorte = 0;
+var pesoZucchineLunghe = 0;
+
 for(var i = 0; i < zucchine.length; i++) {
-    if(zucchine[i]["lunghezza"] < 150) {
-        zucchineCorte.push(zucchine[i]["lunghezza"]);
-        
-    } else if(zucchine[i]["lunghezza"] > 150){
-        zucchineLunghe.push(zucchine[i]["lunghezza"]);
+    if(zucchine[i]["lunghezza"] <= 17) {
+        zucchineCorte.push(zucchine[i]);
+        pesoZucchineCorte += zucchine[i]["peso"];
+    } else if(zucchine[i]["lunghezza"] > 17){
+        zucchineLunghe.push(zucchine[i]);
+        pesoZucchineLunghe += zucchine[i]["peso"];
     }
 
 }
 console.log(zucchineCorte);
+console.log(`peso totale è: ${pesoZucchineCorte}gr`);
+
 console.log(zucchineLunghe);
+console.log(`peso totale è: ${pesoZucchineLunghe}gr`);
