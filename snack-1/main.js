@@ -72,7 +72,7 @@ for(var i = 0; i < zucchine.length; i++) {
     console.log( zucchine[i]["peso"] );
 }
 
-console.log(`${"La somma è:"} ${somma}`);
+console.log(`La somma è: ${somma}gr`);
 
 
 
