@@ -14,7 +14,7 @@ function argThree(arr, numMin, numMax) {
 
 
     for(let i = 0; i < arr.length; i++) {
-         if(i >= numMin && i <= numMax){
+         if(i >= numMin - 1 && i <= numMax - 1){
             newArray.push(arr[i]);
          }
     }
